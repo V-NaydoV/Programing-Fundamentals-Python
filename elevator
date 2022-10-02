@@ -1,0 +1,5 @@
+from math import ceil
+people_count = int(input())
+elevator_capacity = int(input())
+number_of_course = ceil(people_count / elevator_capacity)
+print(number_of_course)
