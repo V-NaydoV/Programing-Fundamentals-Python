@@ -1,0 +1,16 @@
+snowballs = int(input())
+highest_quality_snowball = 0
+weight = 0
+time = 0
+quality = 0
+for snowball in range(snowballs):
+    snowball_weight = int(input())
+    time_of_making = int(input())
+    snowball_quality = int(input())
+    final_quality = (snowball_weight / time_of_making) ** snowball_quality
+    if highest_quality_snowball < final_quality :
+        highest_quality_snowball = int(final_quality)
+        weight = int(snowball_weight)
+        time = int(time_of_making)
+        quality = int(snowball_quality)
+print(f"{weight} : {time} = {highest_quality_snowball} ({quality})")
