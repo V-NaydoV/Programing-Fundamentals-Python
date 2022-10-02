@@ -1,0 +1,15 @@
+lose_count = int(input())
+helmet_price = float(input())
+sword_price = float(input())
+shield_price = float(input())
+armour_price = float(input())
+broken_helmets = lose_count // 2
+broken_swords = lose_count // 3
+broken_shields = lose_count // 6
+broken_armour = broken_shields // 2
+total_expenses = helmet_price * broken_helmets + \
+                 sword_price * broken_swords + \
+                 shield_price * broken_shields + \
+                 armour_price * broken_armour
+
+print(f"Gladiator expenses: {total_expenses:.2f} aureus")
