@@ -1,0 +1,6 @@
+number = int(input())
+lst = []
+for courses in range (number):
+    course = input()
+    lst.append(course)
+print(lst)
