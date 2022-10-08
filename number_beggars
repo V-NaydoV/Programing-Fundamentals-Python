@@ -1,0 +1,19 @@
+money_list = input().split(', ') 
+
+money_list_digits = []
+for current_index in money_list:
+    money_list_digits.append(int(current_index))
+    
+starting_index = 0
+beggars = int(input())
+final_list = []
+
+while starting_index < beggars:
+    sum_of_beggar = 0
+    
+    for index in range (starting_index, len(money_list_digits), beggars):
+        sum_of_beggar += money_list_digits[index]
+    final_list.append(sum_of_beggar)
+    starting_index += 1
+    
+print(final_list)
