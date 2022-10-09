@@ -28,7 +28,7 @@ for event in events:
             continue
 
     else:
-        if coins > event_value:
+        if coins >= event_value:
             coins -= event_value
             print(f'You bought {type_of_event}.')
         else:
