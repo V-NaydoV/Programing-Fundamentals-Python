@@ -1,0 +1,9 @@
+numbers = [float(n) for n in input().split()]
+
+
+def roundes_numbers():
+    result = [round(num) for num in numbers]
+    return result
+
+
+print(roundes_numbers())
