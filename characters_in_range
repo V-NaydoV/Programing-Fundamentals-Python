@@ -1,0 +1,14 @@
+def collection_of_characters(first, last):
+    character_list = []
+    for chars in range(ord(first) +1, ord(last)):
+        character_list.append(chr(chars))
+
+    return character_list
+
+
+first_character = input()
+second_character = input()
+result = collection_of_characters(first_character, second_character)
+
+
+print(*result)
