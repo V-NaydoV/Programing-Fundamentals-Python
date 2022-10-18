@@ -1,0 +1,22 @@
+list_of_numbers = input().split()
+
+
+def min_max_and_sum(numbers):
+    number_list = []
+    numbers_sum = 0
+    for digit in numbers:
+        number_list.append(int(digit))
+        numbers_sum += int(digit)
+    number_list.sort()
+    min_num = number_list[0]
+    max_num = number_list[-1]
+    return  numbers_sum, min_num, max_num
+
+
+numbers_sum, min_num, max_num = min_max_and_sum(list_of_numbers)
+
+print(f'The minimum number is {min_num}')
+print(f'The maximum number is {max_num}')
+print(f'The sum number is: {numbers_sum}')
+
+
