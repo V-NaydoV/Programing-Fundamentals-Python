@@ -1,0 +1,15 @@
+list_of_numbers = input().split()
+
+
+def even_nums(numbers):
+    number_list = []
+    for digit in numbers:
+        number_list.append(int(digit))
+    final_list = []
+    for number in number_list:
+        if number % 2 == 0:
+            final_list.append(number)
+    return final_list
+
+
+print(even_nums(list_of_numbers))
