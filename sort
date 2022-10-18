@@ -1,0 +1,12 @@
+list_of_numbers = input().split()
+
+
+def sorted_numbers(numbers):
+    number_list = []
+    for digit in numbers:
+        number_list.append(int(digit))
+    number_list.sort()
+    return number_list
+
+
+print(sorted_numbers(list_of_numbers))
