@@ -1,0 +1,12 @@
+list_of_strings = input().split()
+palindrome_string = input()
+palindrome_string_counter = 0
+palindrome_strings = []
+for string in list_of_strings:
+    if string == string[::-1]:
+        palindrome_strings.append(string)
+        if string == palindrome_string:
+            palindrome_string_counter += 1
+print(palindrome_strings)
+print(f'Found palindrome {palindrome_string_counter} times')
+
