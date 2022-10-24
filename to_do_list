@@ -1,0 +1,13 @@
+list_of_tasks = []
+
+while True:
+    command = input()
+    if command == 'End':
+        break
+    importance, task = command.split('-')
+    list_of_tasks.append([importance, task])
+to_do_list = [task[1] for task in sorted(list_of_tasks)]
+print(to_do_list)
+
+
+
