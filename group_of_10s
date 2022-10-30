@@ -1,0 +1,17 @@
+people_in_groups = input().split(', ')
+group = 10
+while True:
+    current_group = []
+    for people in people_in_groups:
+        if int(people) <= group:
+            current_group.append(int(people))
+    for people_group in current_group:
+        people_in_groups.remove(str(people_group))
+    print(f"Group of {group}'s: {current_group}")
+    group += 10
+    if len(people_in_groups) <= 0:
+        break
+
+
+
+
