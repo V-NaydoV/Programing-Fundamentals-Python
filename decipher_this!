@@ -1,0 +1,20 @@
+strings = input().split()
+decipher_text = []
+for string in strings:
+    digits = []
+    final_string = []
+    for letter in string:
+        if letter.isdigit():
+            digits.append(letter)
+        else:
+            final_string.append(letter)
+    number = int(''.join(digits))
+    final_string.insert(0, chr(number))
+    final_string[1], final_string[-1] = final_string[-1], final_string[1]
+    decipher_text.append(''.join(final_string))
+print(*decipher_text)
+
+
+
+
+
