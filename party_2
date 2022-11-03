@@ -1,0 +1,23 @@
+class Party:
+
+    def __init__(self):
+        self.people_in_party = []
+
+    def going(self, people):
+        self.people_in_party.append(people)
+
+    def attending(self):
+        return ', '.join(people for people in self.people_in_party)
+
+    def number_of_guest(self):
+        return len(self.people_in_party)
+
+
+party = Party()
+command = input()
+while command != 'End':
+    party.going(command)
+    command = input()
+
+print(f'Going: {party.attending()}')
+print(f'Total: {party.number_of_guest()}')
