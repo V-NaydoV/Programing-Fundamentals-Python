@@ -1,0 +1,24 @@
+class Class:
+    __students_count = 22
+
+    def __init__(self, name):
+        self.name = name
+        self.students = []
+        self.grades = []
+
+    def add_student(self, name: str, grade: float):
+        if Class.__students_count > 0:
+            self.students.append(name)
+            self.grades.append(grade)
+            Class.__students_count -= 1
+
+    def get_average_grade(self):
+        score = 0
+        for grade in self.grades:
+            score += grade
+        avr_grade = score / (len(self.grades))
+        return f'{avr_grade:.2f}'
+
+    def __repr__(self):
+        return f"The students in {self.name}: {', '.join(self.students)}." \
+               f"Average grade: {float(Class.get_average_grade(self))}"
