@@ -1,0 +1,7 @@
+input_line = input().split(' ')
+bakery = {}
+for items in range(0, len(input_line), 2):
+    key = input_line[items]
+    value = input_line[items+1]
+    bakery[key] = int(value)
+print(bakery)
