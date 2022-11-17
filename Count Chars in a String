@@ -1,0 +1,11 @@
+input_line = input().split()
+string = ''.join(input_line)
+result = {}
+for letter in string:
+    if letter not in result.keys():
+        result[letter]= 0
+    result[letter] += 1
+for key, value in result.items():
+    print(f'{key} -> {value}')
+
+
