@@ -1,11 +1,14 @@
-contact = input()
-names = int(input())
 contacts = {}
-name, number = contact.split('-')
-contacts[name] = number
-for num in range(names):
-    contact_name = input()
-    if contact_name in contacts.keys():
-        print(f'{contact_name} -> {contacts[contact_name].}')
+input_line = input()
+while len(input_line) > 1:
+    name, number = input_line.split('-')
+    contacts[name] = number
+    input_line = input()
+for num in range(0, int(input_line)):
+    contact = input()
+    if contact in contacts.keys():
+        print(f'{contact} -> {contacts[contact]}')
     else:
-        print(f"Contact {contact_name} does not exist ")
+        print(f"Contact {contact} does not exist.")
+
+
