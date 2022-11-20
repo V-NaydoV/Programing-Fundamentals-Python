@@ -1,0 +1,11 @@
+contact = input()
+names = int(input())
+contacts = {}
+name, number = contact.split('-')
+contacts[name] = number
+for num in range(names):
+    contact_name = input()
+    if contact_name in contacts.keys():
+        print(f'{contact_name} -> {contacts[contact_name].}')
+    else:
+        print(f"Contact {contact_name} does not exist ")
