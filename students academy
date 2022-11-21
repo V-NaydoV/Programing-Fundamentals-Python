@@ -1,0 +1,17 @@
+academy = {}
+rows = int(input())
+for students in range(rows):
+    student_name = input()
+    grade = float(input())
+    counter = 0
+    if student_name not in academy:
+        academy[student_name] = []
+    academy[student_name].append(grade)
+for student, grades in academy.items():
+    avr_grade = sum(academy[student]) / len(academy[student])
+    if avr_grade >= 4.50:
+        academy[student] = avr_grade
+    else:
+        del academy[student]
+for name, final_grade in academy.items():
+    print(f'{name} -> {final_grade:.2f}')
