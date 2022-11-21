@@ -1,0 +1,12 @@
+courses = {}
+command = input()
+while command != 'end':
+    course_name, student = command.split(' : ')
+    if course_name not in courses:
+        courses[course_name] = []
+    courses[course_name].append(student)
+    command = input()
+for course in courses.keys():
+    print(f'{course}: {len(courses[course])}')
+    for students in courses[course]:
+        print(f'-- {students}')
