@@ -1,0 +1,23 @@
+parking_validator = {}
+cars = int(input())
+for number in range(cars):
+    input_line = input().split(' ')
+    action = input_line[0]
+    if action == 'register':
+        person_name = input_line[1]
+        license_plate = input_line[2]
+        if person_name not in parking_validator:
+            parking_validator[person_name] = license_plate
+            result = f"{person_name} registered {license_plate} successfully"
+        else:
+            result = f"ERROR: already registered with plate number {license_plate}"
+    elif action == 'unregister':
+        person_name = input_line[1]
+        if person_name not in parking_validator.keys():
+            result = f"ERROR: user {person_name} not found"
+        else:
+            result = f"{person_name} unregistered successfully"
+            del parking_validator[person_name]
+    print(result)
+for person, plate in parking_validator.items():
+    print(f'{person} => {plate}')
