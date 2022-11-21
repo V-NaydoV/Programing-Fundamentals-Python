@@ -1,0 +1,14 @@
+products = {}
+command_line = input()
+while command_line != 'buy':
+    product, price, quantity = command_line.split(' ')
+    if product not in products.keys():
+        products[product] = []
+        products[product].append(float(price))
+        products[product].append(int(quantity))
+    else:
+        products[product][0] = float(price)
+        products[product][1] += int(quantity)
+    command_line = input()
+for key in products.keys():
+    print(f'{key} -> {products[key][0] * products[key][1]:.2f} ')
