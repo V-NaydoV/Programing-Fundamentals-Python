@@ -1,0 +1,14 @@
+text = input()
+digits = ''
+letter = ''
+simbols = ''
+for char in text:
+    if char.isdigit():
+        digits += char
+    elif char.isalpha():
+        letter += char
+    else:
+        simbols += char
+print(digits)
+print(letter)
+print(simbols)
