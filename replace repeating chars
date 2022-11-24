@@ -1,0 +1,9 @@
+text = input()
+result = ''
+last_letter = ''
+for letter in text:
+    if last_letter == letter:
+        continue
+    result += letter
+    last_letter = letter
+print(result)
