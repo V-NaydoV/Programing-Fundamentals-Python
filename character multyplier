@@ -1,0 +1,18 @@
+text = input()
+final_sum = 0
+first_string, second_string = text.split(' ')
+if len(first_string) > len(second_string):
+    for index in range(len(second_string)):
+        final_sum += ord(first_string[index]) * ord(second_string[index])
+    for num in range(index+1, len(first_string)):
+        final_sum += ord(first_string[num])
+elif len(second_string) > len(first_string):
+    for index in range(len(first_string)):
+        final_sum += ord(first_string[index]) * ord(second_string[index])
+    for num in range(index, len(second_string + 1)):
+        final_sum += ord(second_string[num])
+else:
+    for index in range(len(first_string)):
+        final_sum += ord(first_string[index]) * ord(second_string[index])
+    
+print(final_sum)
