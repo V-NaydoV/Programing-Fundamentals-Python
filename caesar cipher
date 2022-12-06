@@ -3,3 +3,8 @@ result = ''
 for letter in text:
     result += chr(ord(letter) + 3)
 print(result)
+
+
+#text = input()
+#encrypted_text = [chr(ord(x)+3) for x in text]
+#print(''.join(encrypted_text))
